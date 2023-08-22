@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "EFF886A2-C8AB-4B69-9647-741B3830BB76"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "281A5581-ABA7-429B-B473-AB96E214EBC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Memorize/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "EmojiMemorizandoGameView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "281A5581-ABA7-429B-B473-AB96E214EBC1 - 68b769ee81eedd20"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memorizar.ContentView.init() -&gt; Memorizar.ContentView"
+                  moduleName = "Memorizar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user239481/Desktop/Memorize/Memorize/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "281A5581-ABA7-429B-B473-AB96E214EBC1 - d2871fa539707d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Memorizar.ContentView.init(cardCount: Swift.Int) -&gt; Memorizar.ContentView"
+                  moduleName = "Memorizar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user239481/Desktop/Memorize/Memorize/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
