@@ -10,11 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         HStack {
+            CardView(Virada: false)
+            CardView()
             CardView(Virada: true)
-            CardView()
-            CardView()
-            CardView()
-            CardView()
+            CardView(Virada: true)
         }
         .foregroundColor(.green)
         .padding()
@@ -22,18 +21,21 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    var Virada: Bool = false
+    @State var Virada = false
+    
     var body: some View {
-        ZStack(content: {
+        ZStack {
+            let base = RoundedRectangle(cornerRadius: 12)
             if Virada {
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.white)
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(lineWidth: 2)
+                base.fill(.white)
+                base.strokeBorder(lineWidth: 2)
                 Text("👀").font(.largeTitle)
             } else {
-                RoundedRectangle(cornerRadius: 12)
+                base.fill()
             }
-        })
+        }
+        .onTapGesture  {
+            Virada.toggle()
+        }
     }
 }
