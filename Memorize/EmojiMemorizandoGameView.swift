@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Memorize
+//  Memorizando
 //
 //  Created by trian on 8/21/23.
 //
@@ -9,11 +9,13 @@ import SwiftUI
 
 struct EmojiMemorizandoGameView: View {
     @ObservedObject var viewModel: EmojiMemorizando
+    
+    private let aspectRatio: CGFloat = 2/3
+    
     var body: some View {
         VStack {
-            ScrollView {
                 cards
-            }
+                    .animation(.default, value: viewModel.cards)
             Button("Embaralhar") {
                 viewModel.shuffle()
             }
@@ -21,13 +23,13 @@ struct EmojiMemorizandoGameView: View {
         .padding()
     }
     
-    var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85), spacing: 0)], spacing: 0) {
-            ForEach(viewModel.cards.indices, id: \.self) { index in
-                CardView(viewModel.cards[index])
-                    .aspectRatio(2/3, contentMode: .fit)
+    private var cards: some View {
+        AspectVGrid(viewModel.cards, aspectRatio: aspectRatio) { card in
+                CardView(card)
                     .padding(4)
-            }
+                    .onTapGesture {
+                        viewModel.choose(card)
+                    }
         }
         .foregroundColor(Color.black)
     }
@@ -55,6 +57,7 @@ struct CardView: View {
             base.fill()
                 .opacity(card.Virada ? 0 : 1)
         }
+        .opacity(card.Virada || !card.isMatched ? 1 : 0)
     }
 }
 

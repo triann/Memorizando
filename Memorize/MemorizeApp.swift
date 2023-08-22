@@ -1,8 +1,8 @@
 //
 //  MemorizeApp.swift
-//  Memorize
+//  Memorizando
 //
-//  Created by user239481 on 8/21/23.
+//  Created by trian on 8/21/23.
 //
 
 import SwiftUI

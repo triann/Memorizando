@@ -1,18 +1,17 @@
 //
 //  EmojiMemorizando.swift
-//  Memorizar
+//  Memorizando
 //
-//  Created by user239481 on 8/22/23.
+//  Created by trian on 8/22/23.
 //
 
 import SwiftUI
 
 class EmojiMemorizando: ObservableObject {
-    private static let emojis =
-        ["👀","🫀","🦷","🧠","🫁","👅","👣","🖐️"]
+    private static let emojis = ["👀","🫀","🦷","🧠","🫁","👅","👣","🖐️"]
        
     private static func createMemorizandoGame () -> MemorizandoGame<String> {
-        MemorizandoGame(numberOfPairsOfCards: 16) { pairIndex in
+        return MemorizandoGame(numberOfPairsOfCards: 12) { pairIndex in
             if emojis.indices.contains(pairIndex) {
                 return emojis[pairIndex]
             } else {
